@@ -1,0 +1,264 @@
+* body {
+    background-image: url(https://img.freepik.com/vector-gratis/fondo-acuarela_220290-34.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  
+  }*
+  
+  /*SE DECLARAN LAS GLOBALES PARA ELIMINAR LO QUE NO QUEREMOS QUE SALGA*/
+  *{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box; /*para que los elementos no se salgan del contenedor*/
+  }
+  
+  /*BARRA DE NAVEGACIÓN*/
+  nav {
+    background: #41283d59;
+    height: 80px;
+    width: 100%;
+  }
+  
+  .enlace {
+    position: absolute;
+    padding: 20px 50px;
+  }
+  
+  .logo {
+    height: 40px;
+  }
+  
+  /*ACOMODAMOS LOS ELEMENTOS A LA DERECHA Y LE DAMOS UN MARGEN*/
+  nav ul {
+    float: right;
+    margin-right: 20px;
+  }
+  
+  nav ul li {
+    display: inline-block; /*ponemos los elementos en línea de izquierda a derecha (botones)*/
+    line-height: 80px; /*para centrar*/
+    margin: 0 5px;
+  }
+  
+  nav ul li a {
+    color: #000000;
+    font-size: 15px;
+    padding: 7px 13px; /*espaciado*/
+    text-transform: uppercase;
+  }
+  
+  li a.active, li a:hover {
+    border-bottom: 2px solid cornflowerblue;
+  }
+  
+  .checkbtn {
+    font-size: 22px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  
+  #check {
+    display: none;
+  }
+  
+  /*RESPONSIVE DESING*/
+  @media (max-width:952px) {
+    .enlace {
+        padding-left: 20px;
+    }
+  
+    nav ul li a {
+        font-size: 16px;
+    }
+  }
+  
+  @media (max-width:858px) {
+    .checkbtn {
+        display: block;
+    }
+  
+    ul { 
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+  
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    
+    
+    nav ul li a {
+        font-size: 20px;
+    }
+    
+    li a:hover, li a.active{
+        background: none;
+        color: red;
+    }
+    
+    #check:checked ~ ul{
+        left:0;
+    }
+    
+  }
+  
+  /*ENCABEZAD0S*/
+  .encabezado-t1 {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 60px;
+      color: #F5B40B;
+      font-weight: bold;
+      text-align: center;
+  }
+  
+  .encabezado-t2 {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 30px;
+      color: #000000;
+      font-weight: bold;
+      text-align: center;
+  }
+  
+  .encabezado-t3 {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 30px;
+      color: #41283D;
+      font-weight: bold;
+      text-align: center;
+  }
+  
+  /*IMAGEN PRINCIPAL*/
+  .contenedor-imagen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .contenedor-imagen img {
+    max-width: 30%;
+    height: auto;
+  }
+  
+  /*CUERPO*/
+  #titulo {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .parrafo-centrado {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 20px;
+      text-align: justify;
+      text-indent: 20px;
+      display: flex;
+      justify-content: center;
+    }
+  
+    /*PRIMER BOTÓN*/
+    .contenedor-dos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 15vh; /* Ajusta la altura según tus necesidades */
+    }
+    
+    .elipse {
+      position: relative;
+      display: inline-block;
+      padding: 20px 30px;
+      background-color: #41283D;
+      border: none;
+      color: #fff;
+      font-size: 20px;
+      border-radius: 50px;
+    }
+    
+  /*  .elipse::before {
+      content: '';
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      right: -5px;
+      bottom: -5px;
+      background-color: #FFC107;
+      border-radius: 50px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }*/
+    
+    .elipse:hover::before {
+      opacity: 1;
+    }
+  
+    .parrafo-centradoDos {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 20px;
+      text-align: justify;
+      text-indent: 20px;
+      display: flex;
+      justify-content: center;
+    }
+  
+  .titulo-imagen {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  .list {
+    list-style: disc;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    line-height: 1.5;
+  }
+  
+  .contenedor-tep {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+  
+  .imagen-terapia {
+    width: 350px;
+    margin-right: 25px;
+    border-radius: 15px;
+  
+  }
+  
+  #mapa {
+    width: 400px; /* Establece el ancho del mapa */
+    height: 300px; /* Establece la altura del mapa */
+    margin: 0 auto; /* Centra horizontalmente el mapa */
+  }
+  
+  .contenedor-video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* Ajusta la altura según tus necesidades */
+  }
+  
+  video {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+ 
